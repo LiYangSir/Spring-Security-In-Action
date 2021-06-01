@@ -1,0 +1,21 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          authorizationserver:
+            client-id: client-for-server
+            client-secret: client-for-server
+            provider: authorizationserver
+            client-name: 使用自定义授权认证
+            authorization-grant-type: authorization_code
+            clientAuthenticationMethod: basic
+            scope: profile,email,phone
+            redirect-uri: "http://localhost:8080/login/oauth2/code/{registrationId}"
+
+        provider:
+          authorizationserver:
+            authorization-uri: http://oauth.quguai.cn:9999/oauth/authorize
+            token-uri: http://oauth.quguai.cn:9999/oauth/token
+            user-info-uri: http://oauth.quguai.cn:9999/me
+            user-name-attribute: "name"

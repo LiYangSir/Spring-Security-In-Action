@@ -1,0 +1,14 @@
+server:
+  port: 9090
+logging:
+  level:
+    root: info
+    org.springframework.web: info
+    org.springframework.security: debug
+    org.springframework.boot.autoconfigure: debug
+
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://oauth.quguai.cn:9999/me
+
