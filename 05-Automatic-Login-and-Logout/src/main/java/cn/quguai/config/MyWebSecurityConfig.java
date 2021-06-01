@@ -19,7 +19,7 @@ public class MyWebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private MyUserDetailService userDetailsService;
 
-    @Override
+    @Override  // VWtrYnFhJTJGN3dDVnBxMGJ0TWMwJTJCQ1ElM0QlM0Q6JTJCWE5BRERveUtXZXgxcVJtMkJWVnJnJTNEJTNE
     protected void configure(HttpSecurity http) throws Exception {
         JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
         jdbcTokenRepository.setDataSource(dataSource);

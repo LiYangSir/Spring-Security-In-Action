@@ -6,6 +6,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+/**
+ * @author LiYangSir
+ */
+
 @SpringBootApplication
 public class SessionApplication {
     public static void main(String[] args) {

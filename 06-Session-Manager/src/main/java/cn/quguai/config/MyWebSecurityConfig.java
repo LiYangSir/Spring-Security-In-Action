@@ -1,7 +1,6 @@
 package cn.quguai.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -22,9 +21,9 @@ public class MyWebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .formLogin().permitAll()
                 .and().sessionManagement()
                 // .invalidSessionUrl("/session/invalid") // Session 失效后的定向网址
-                .invalidSessionStrategy(new MyInvalidSessionStrategy()) // Session 无效的策略，实现InvalidSessionStrategy
+//                .invalidSessionStrategy(new MyInvalidSessionStrategy()) // Session 无效的策略，实现InvalidSessionStrategy
                 .maximumSessions(1)// 最大用户数量
-                .maxSessionsPreventsLogin(true) // 组织新会话的连接：SessionQQ就是False
+                .maxSessionsPreventsLogin(true) // 组织新会话的连接：Session QQ就是False
                 .sessionRegistry(sessionRegistry);
     }
 }
